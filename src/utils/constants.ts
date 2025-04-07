@@ -35,6 +35,8 @@ export const scriptingInfo = {
 export const microInfo = {
   title: 'Programación de microcontroladores',
   techList: [
+    { src: '/assets/logos/c.svg', alt: 'Logo C' },
+    { src: '/assets/logos/cpp.svg', alt: 'Logo C++' },
     { src: '/assets/logos/arduino.svg', alt: 'Logo Arduino' },
     { src: '/assets/logos/espressif.svg', alt: 'Logo Espressif' },
     { src: '/assets/logos/mplab.webp', alt: 'Logo MPLAB X' },

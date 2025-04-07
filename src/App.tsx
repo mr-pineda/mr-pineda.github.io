@@ -9,11 +9,11 @@ import {
   iotInfo,
 } from './utils/constants';
 
-type Stack = 'front' | 'mobile' | 'scripting' | 'microcontrollers' | 'iot';
+type workArea = 'front' | 'mobile' | 'scripting' | 'microcontrollers' | 'iot';
 const App = () => {
-  const [currentStack, setCurrentStack] = useState<null | Stack>(null);
+  const [currentStack, setCurrentStack] = useState<null | workArea>(null);
 
-  const toggleStack = (stack: Stack) => {
+  const toggleStack = (stack: workArea) => {
     if (currentStack !== stack) {
       setCurrentStack(stack);
     } else {
@@ -163,9 +163,79 @@ const App = () => {
 
         <section className='mb-8'>
           <h2 className='mb-4 text-xl font-semibold'>Proyectos</h2>
-          <p className='text-center'>
-            Pronto se integrarán el listado de proyectos ...
-          </p>
+          <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+            <div className='rounded-lg border border-gray-300 bg-white p-4 shadow-md'>
+              <img
+                className='mb-4 h-40 w-full rounded-lg object-cover'
+                src='/assets/img/fasic_SSPD.png'
+                alt='Project 1'
+              />
+              <h3 className='mb-2 text-lg font-semibold'>
+                Aceleración en algoritmo de segmentación
+              </h3>
+              <p className='text-sm text-gray-600'>
+                Este proyecto consiste en la aceleración de un algoritmo de
+                segmentación de fibras neuronales desarrollado originalmente en
+                Python. Se reescribió en C, modificando el acceso a la memoria y
+                eliminando computos inecesarios, logrando un tiempo de ejecución
+                hasta 4000 veces menor que el algoritmo original.
+              </p>
+              <a
+                href='https://github.com/mr-pineda/MT_UdeC_filtrado_fibras'
+                className='mt-4 inline-block text-blue-500 hover:underline'
+              >
+                Repositorio
+              </a>
+            </div>
+
+            <div className='rounded-lg border border-gray-300 bg-white p-4 shadow-md'>
+              <img
+                className='mb-4 h-40 w-full rounded-lg object-cover'
+                src='/assets/img/abpro.png'
+                alt='Project 2'
+              />
+              <h3 className='mb-2 text-lg font-semibold'>Demo web Hospital</h3>
+              <p className='text-sm text-gray-600'>
+                Template de una pagina web para un hospital ficticio,
+                desarrollado en React y TailwindCSS. Principalmente tiene
+                funcionalidades informativas.{' '}
+                <span className='font-bold'>
+                  Este proyecto aún está en desarrollo.
+                </span>
+              </p>
+              <a
+                href='https://github.com/mr-pineda/m6_abpro'
+                className='mt-4 block text-blue-500 hover:underline'
+              >
+                Repositorio
+              </a>
+              <a
+                href='https://mr-pineda.github.io/m6_abpro/'
+                className='mt-4 block text-blue-500 hover:underline'
+              >
+                Visitar página
+              </a>
+            </div>
+
+            <div className='rounded-lg border border-gray-300 bg-white p-4 shadow-md'>
+              {/* <img
+                className='mb-4 h-40 w-full rounded-lg object-cover'
+                src='/assets/projects/project2.jpg'
+                alt='Project 2'
+              /> */}
+              <div className='mb-4 h-40 w-full rounded-lg bg-gray-400 object-cover'></div>
+              <h3 className='mb-2 text-lg font-semibold'>
+                Pronto más proyectos
+              </h3>
+              <p className='text-sm text-gray-600'>...</p>
+              {/* <a
+                href='#'
+                className='mt-4 inline-block text-blue-500 hover:underline'
+              >
+                Ver más
+              </a> */}
+            </div>
+          </div>
         </section>
 
         <section>
@@ -182,10 +252,6 @@ const App = () => {
           </p>
         </section>
       </main>
-
-      <footer className='bg-gray-200 p-4 text-center'>
-        <p>&copy; {new Date().getFullYear()} Felipe Pineda</p>
-      </footer>
     </div>
   );
 };
