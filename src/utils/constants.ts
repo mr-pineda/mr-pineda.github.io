@@ -9,6 +9,7 @@ export const frontInfo = {
     { src: '/assets/logos/css3.svg', alt: 'Logo CSS3' },
     { src: '/assets/logos/javascript.svg', alt: 'Logo Javascript' },
     { src: '/assets/logos/typescript.svg', alt: 'Logo Typescript' },
+    { src: '/assets/logos/bun.svg', alt: 'Logo Bun' },
   ],
 };
 
