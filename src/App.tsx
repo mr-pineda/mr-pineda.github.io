@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-100 via-green-100 to-gray-100'>
-      <main className='container px-2 pt-1'>
+      <main className='container mx-auto px-2 pt-1'>
         <h1 className='mt-8 bg-gradient-to-r from-blue-700 via-green-600 to-teal-500 bg-clip-text text-center text-5xl font-extrabold text-transparent drop-shadow-lg md:text-7xl lg:mr-3 lg:inline-block lg:text-start'>
           Felipe Pineda
         </h1>
